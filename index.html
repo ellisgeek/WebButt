@@ -1,68 +1,88 @@
 <!DOCTYPE html5>
 <html>
-       <head>
-              <title>SAIIIILLL</title>
-              <style type="text/css">
-              body{
-                     background-color: #CCC
-              }
+	<head>
+		<title>SAIIIILLL</title>
+		<style type="text/css">
+			body{
+			background-color: #CCC;
+			margin: 0;
+			}
+			
+			#bg{
+				background-image: url("bg.jpg");
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center; 
+				background-color: #DDD;
+				-webkit-filter: blur(32px);
+				filter: blur(32px);
+				position: fixed;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				display: block;
+				width: 100%;
+				height:100vh;
+			}
+			
+			#content{
+				z-index: 9999;
+			}
+			
+			.center{
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				flex-direction: row;
+				-ms-flex-direction: row;
+				-webkit-flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height:100vh;
+			}
 
-              .outer {
-                     height:100vh;
-              }
+			#sailButton{
+				display: block;
+				width: 256px;
+				height: 64px;
+				line-height: 64px;
+				border-radius: 32px;
+				color: #FFF;
+				background-color: #0088ff;
+				text-align: center;
+				font-size: 48px;
+				font-weight: bold;
+				font-family: "Impact", sans-serif;
+				border: 4px solid #555;
+				box-shadow: 3px 3px 16px black;
+				-ms-user-select: none;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				user-select: none;
+				-webkit-touch-callout: none;
+				cursor: pointer;
+			}
 
-              .center{
-                     display: -ms-flexbox;
-                     display: -webkit-flex;
-                     display: flex;
-                     flex-direction: row;
-                     -ms-flex-direction: row;
-                     -webkit-flex-direction: row;
-                     align-items: center;
-                     justify-content: center;
-              }
+			#sailButton:active{
+				background-color: #0066dd;
+				color: #DDD;
+				border-color: #333;
+				box-shadow: 1px 1px 8px black;
+			}
+		</style>
+		<meta name="viewport" content="user-scalable=no"/>
+	</head>
 
-              #sailButton{
-                     display: block;
-                     width: 256px;
-                     height: 64px;
-                     line-height: 64px;
-                     border-radius: 32px;
-                     color: #FFF;
-                     background-color: #0088ff;
-                     text-align: center;
-                     font-size: 48px;
-                     font-weight: bold;
-                     font-family: "Impact", sans-serif;
-                     border: 4px solid #555;
-                     box-shadow: 3px 3px 16px black;
-                     -ms-user-select: none;
-                     -moz-user-select: none;
-                     -webkit-user-select: none;
-                     -khtml-user-select: none;
-                     user-select: none;
-                     -webkit-touch-callout: none;
-                     cursor: pointer;
-              }
-
-              #sailButton:active{
-                     background-color: #0066dd;
-                     color: #DDD;
-                     border-color: #333;
-                     box-shadow: 1px 1px 8px black;
-              }
-              </style>
-       </head>
-
-       <body class="center">
-              <audio id="sail" preload="auto">
-                     <source src="">
-              </audio>
-
-              <div class="outer center">
-                     <div>
-                     <a id="sailButton" onclick="document.getElementById('sail').play()">SAIIIILLL</a>
-                     </div>
-              </div>
-       </body>
+	<body class="center">
+		<audio id="sail" preload="auto">
+			<source src="sail.wav" type="audio/wav">
+		</audio>
+		
+		<div id="bg"></div>
+		<div id="content">
+			<a id="sailButton" onclick="document.getElementById('sail').play()">SAIIIILLL</a>
+		</div>
+	</body>
 </html>
