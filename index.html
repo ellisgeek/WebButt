@@ -1,7 +1,13 @@
 <!DOCTYPE html5>
 <html>
 	<head>
-		<title>SAIIIILLL</title>
+		<title>Dickbutt</title>
+		<link rel="apple-touch-icon-precomposed" href="button.png" sizes="256x256" />
+		<link rel="icon" href="button.png" sizes="256x256" />
+		<link rel="favicon" href="button.png" sizes="256x256" />
+		<meta name="msapplication-TileImage" content="button.png">
+		<meta property="og:image" content="button.png"/>
+		
 		<style type="text/css">
 			body{
 			background-color: #CCC;
@@ -42,20 +48,12 @@
 				height:100vh;
 			}
 
-			#sailButton{
+			#button{
 				display: block;
 				width: 256px;
-				height: 64px;
-				line-height: 64px;
-				border-radius: 32px;
-				color: #FFF;
-				background-color: #0088ff;
-				text-align: center;
-				font-size: 48px;
-				font-weight: bold;
-				font-family: "Impact", sans-serif;
-				border: 4px solid #555;
-				box-shadow: 3px 3px 16px black;
+				height: 256px;
+				line-height: 256px;
+				background-image: url("button.png")
 				-ms-user-select: none;
 				-moz-user-select: none;
 				-webkit-user-select: none;
@@ -65,11 +63,12 @@
 				cursor: pointer;
 			}
 
-			#sailButton:active{
-				background-color: #0066dd;
-				color: #DDD;
-				border-color: #333;
-				box-shadow: 1px 1px 8px black;
+			#button:active{
+				box-sizing: border-box;
+				  background: url("button-active.png") no-repeat;
+				  width: 256px; /* Width of new image */
+				  height: 256px; /* Height of new image */
+				  padding-left: 256px; /* Equal to width of new image */
 			}
 		</style>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
@@ -79,17 +78,17 @@
 	<body class="center">
 		<div class="github-fork-ribbon-wrapper right-bottom">
 			<div class="github-fork-ribbon" style="background-color: #0088ff;">
-				<a href="https://github.com/ellisgeek/SailButton">Fork me on GitHub</a>
+				<a href="https://github.com/ellisgeek/WebButt">Fork me on GitHub</a>
 			</div>
 		</div>
 		
-		<audio id="sail" preload="auto">
-			<source src="sail.wav" type="audio/wav">
+		<audio id="sound" preload="auto">
+			<source src="sound.wav" type="audio/wav">
 		</audio>
 		
 		<div id="bg"></div>
 		<div id="content">
-			<a id="sailButton" onclick="document.getElementById('sail').play()">SAIIIILLL</a>
+			<img id="button" src="button.png" onclick="document.getElementById('sound').play()">
 		</div>
 	</body>
 </html>
